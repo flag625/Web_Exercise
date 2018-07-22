@@ -22,7 +22,7 @@ while True:
         print(data)
         if not data:
             break
-        tcpCliSock.send(b'[%s] %s' %(bytes(ctime(), 'utf-8'),data))
+        tcpCliSock.send(b'[%s] %s' %(ctime().encode(),data))
 
     tcpCliSock.close()
 tcpSerSock.close()
